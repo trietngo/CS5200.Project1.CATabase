@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <a href="/"> << Home</a>
+    <h1><%= title %></h1>
+
+    <div>
+        <a href="/create">
+            <button id="createCat" type="button" class="btn btn-outline-primary btn-sm mb-4">Add A New Cat</button>
+        </a>
+    </div>
+
+    <div>
+        <table class="table table-striped">
+
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date Of Birth</th>
+                <th scope="col">Weight (LBs)</th>
+                <th scope="col">Breed</th>
+                <th scope="col">Personality</th>
+                <th scope="col">Shelter</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+                <% cats.forEach(function(cat) { %>
+
+                    <tr>
+                        <th scope="row"><%= cat.cat_id %></th>
+                        <td><%= cat.cat_name %></td>
+                        <td><%= cat.cat_birthday %></td>
+                        <td><%= cat.cat_weight_lb %></td>
+                        <td><%= cat.cat_breed %></td>
+                        <td><%= cat.cat_personality %></td>
+                        <td><%= cat.cat_shelter %></td>
+                        <td>
+                            <a href="cats/<%= cat.cat_id %>">
+                                <button id="<%= cat.cat_id %>" type="button" class="btn btn-outline-primary btn-sm">Edit</button>
+                            </a>
+                            
+                            <a href="cats/<%= cat.cat_id %>/delete">
+                                <button id="cats/<%= cat.cat_id %>" type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+                            </a>
+                            
+                        </td>
+                    </tr>
+
+                <% }); %>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+      <div>Made by Triet ✨</div>
+    </footer>
+</body>
+</html>

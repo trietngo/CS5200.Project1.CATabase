@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <a href="/"> << Home</a>
+    <h1><%= title %></h1>
+
+    <div>
+      <a href="/createShelter">
+          <button id="createShelter" type="button" class="btn btn-outline-primary btn-sm mb-4">Add A New Shelter</button>
+      </a>
+  </div>
+
+    <div>
+        <table class="table table-striped">
+
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <!-- <th scope="col">Ratings</th> -->
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+                <% shelters.forEach(function(shelter) { %>
+
+                    <tr>
+                        <th scope="row"><%= shelter.shelter_id %></th>
+                        <td><%= shelter.shelter_name %></td>
+                        <td><%= shelter.shelter_location %></td>
+                        <td><%= shelter.shelter_email %></td>
+                        <td><%= shelter.shelter_phone %></td>
+                        <!-- <td><%= shelter.average_score %></td> -->
+                        <td>
+                          <a href="shelters/<%= shelter.shelter_id %>">
+                            <button type="button" id="<%= shelter.shelter_id %>" class="btn btn-outline-primary btn-sm">Edit</button>
+                          </a>
+                          
+                          <a href="shelters/<%= shelter.shelter_id %>/delete">
+                            <button type="button" id="shelters/<%= shelter.shelter_id %>" class="btn btn-outline-danger btn-sm">Delete</button>
+                          </a>
+                            
+                        </td>
+                    </tr>
+
+                <% }); %>
+                
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer>
+      <div>Made by Triet ✨</div>
+    </footer>
+</body>
+</html>

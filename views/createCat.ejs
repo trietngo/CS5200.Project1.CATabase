@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <a href="/cats"> << Cats</a>
+    <h1><%= title %></h1>
+
+    <div class="container">
+
+        <form action="/create/new" method="post">
+
+            <div class="form-group row">
+                <label for="catName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-6">
+                    <input name="catName" type="text" class="form-control" id="catName" placeholder="Name" value="">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catBirthday" class="col-sm-2 col-form-label">Birthday</label>
+                <div class="col-sm-6">
+                    <input type="text" name="catBirthday" placeholder="yyyy-mm-dd" class="form-control" id="catBirthday" value="">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catWeightLbs" class="col-sm-2 col-form-label">Weight in LBs</label>
+                <div class="col-sm-6">
+                    <input name="catWeightLbs" type="text" class="form-control" id="catWeightLbs" value="">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catBreed" class="col-sm-2 col-form-label">Breed</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="catBreed" placeholder="Breed" id="catBreed" value="">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catPersonality" class="col-sm-2 col-form-label">Personality</label>
+                <div class="col-sm-6">
+                    <input type="text" placeholder="Personality" class="form-control" name="catPersonality" id="catPersonality" value="">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catShelter" class="col-sm-2 col-form-label">Shelter</label>
+                <div class="col-sm-6">
+                    <input type="text" placeholder="Shelter" name="catShelter" class="form-control" id="catShelter" value="">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <input class="btn btn-primary" type="submit" value="Add Cat">
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+    <footer>
+      <div>Made by Triet ✨</div>
+    </footer>
+</body>
+</html>

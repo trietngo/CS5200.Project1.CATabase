@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <a href="/shelters"> << Shelters</a>
+    <h1><%= title %></h1>
+
+    <div class="container">
+        <div class="container justify-content-center p-4">
+            <img src="https://www.hayward-ca.gov/sites/default/files/basic-pages/Animal-shelter-Building.png" alt="shelter" height="200px">
+        </div>
+
+        <form action="<%= indShelter[0].shelter_id %>" method="post">
+            <div class="form-group row">
+                <label for="shelterID" class="col-sm-2 col-form-label">Shelter ID</label>
+                <div class="col-sm-6">
+                    <input name="shelterID" type="text" readonly class="form-control" id="shelterID" value="<%= indShelter[0].shelter_id %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="shelterName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-6">
+                    <input name="shelterName" type="text" class="form-control" id="shelterName" value="<%= indShelter[0].shelter_name %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="shelterLocation" class="col-sm-2 col-form-label">Address</label>
+                <div class="col-sm-6">
+                    <input name="shelterLocation" type="text" class="form-control" id="shelterLocation" value="<%= indShelter[0].shelter_location %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="shelterEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-6">
+                    <input name="shelterEmail" type="text" class="form-control" id="shelterEmail" value="<%= indShelter[0].shelter_email %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="shelterPhone" class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control"
+                    name="shelterPhone" id="shelterPhone" value="<%= indShelter[0].shelter_phone %>">
+                </div>
+            </div>
+
+            <!-- <div class="form-group row">
+                <label for="shelterRatings" class="col-sm-2 col-form-label">Ratings</label>
+                <div class="col-sm-6">
+                    <input type="text" readonly class="form-control" name="shelterRatings" id="shelterRatings" value="<%= indShelter[0].average_score %>">
+                </div>
+            </div> -->
+
+            <div class="form-group row">
+                <input class="btn btn-primary" type="submit" value="Update Shelter Info">
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <footer>
+      <div>Made by Triet ✨</div>
+    </footer>
+</body>
+</html>

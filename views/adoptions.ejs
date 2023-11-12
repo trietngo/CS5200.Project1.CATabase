@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <a href="/"> << Home</a>
+    <h1><%= title %></h1>
+
+    <!-- <div>
+      <a href="/createAdoptions">
+          <button id="createCat" type="button" class="btn btn-outline-primary btn-sm mb-4">Add A New Adoption</button>
+      </a>
+    </div> -->
+
+    <div>
+        <table class="table table-striped">
+
+            <thead>
+              <tr>
+                <th scope="col">User</th>
+                <th scope="col">Cat</th>
+                <th scope="col">Adoption Date</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+                <% adoptions.forEach(function(adoption) { %>
+
+                    <tr>
+                        <th scope="row"><%= adoption.user_name %></th>
+                        <td><%= adoption.cat_name %></td>
+                        <td><%= adoption.adoption_date %></td>
+                    </tr>
+
+                <% }); %>
+                
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer>
+      <div>Made by Triet ✨</div>
+    </footer>
+</body>
+</html>

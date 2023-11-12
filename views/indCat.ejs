@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <a href="/cats"> << Cats</a>
+    <h1><%= title %></h1>
+
+    <div class="container">
+        <div class="container justify-content-center p-4">
+            <img src="https://media.tenor.com/ZuTPIRU6S4sAAAAC/what-da-tuna.gif" alt="cat gif" height="200px">
+        </div>
+
+        <form action="<%= indCat[0].cat_id %>" method="post">
+            <div class="form-group row">
+                <label for="catID" class="col-sm-2 col-form-label">Cat ID</label>
+                <div class="col-sm-6">
+                    <input name="catID" type="text" readonly class="form-control" id="catID" value="<%= indCat[0].cat_id %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-6">
+                    <input name="catName" type="text" class="form-control" id="catName" value="<%= indCat[0].cat_name %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catBirthday" class="col-sm-2 col-form-label">Birthday</label>
+                <div class="col-sm-6">
+                    <input type="text" readonly class="form-control" id="catBirthday" value="<%= indCat[0].cat_birthday %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catWeightLbs" class="col-sm-2 col-form-label">Weight in LBs</label>
+                <div class="col-sm-6">
+                    <input name="catWeightLbs" type="text" class="form-control" id="catWeightLbs" value="<%= indCat[0].cat_weight_lb %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catBreed" class="col-sm-2 col-form-label">Breed</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" readonly id="catBreed" value="<%= indCat[0].cat_breed %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catPersonality" class="col-sm-2 col-form-label">Personality</label>
+                <div class="col-sm-6">
+                    <input type="text" readonly class="form-control" id="catPersonality" value="<%= indCat[0].cat_personality %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="catShelter" class="col-sm-2 col-form-label">Shelter</label>
+                <div class="col-sm-6">
+                    <input type="text" readonly class="form-control" id="catShelter" value="<%= indCat[0].cat_shelter %>">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <input class="btn btn-primary" type="submit" value="Update Cat Info">
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+    <footer>
+      <div>Made by Triet ✨</div>
+    </footer>
+</body>
+</html>
